@@ -21,4 +21,4 @@ Para executar a aplicação insira as pastas em um projeto flutter, aplique as d
 
 Ademais, é necessário inserir uma chave Bearer, fornecida pelo Twitter, sendo apenas necessário a criação de uma conta de desenvolvedor.
 
-Obs: A conta utilizada, foi um exemplo e pode ser alterada logo ao lado do campo de Bearer token, esta área está demarcada com um TODO.
+Obs: A conta utilizada, foi um exemplo e pode ser alterada logo ao lado do campo de Bearer token, sendo esta área demarcada com um TODO.
