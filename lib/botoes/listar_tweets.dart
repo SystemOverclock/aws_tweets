@@ -45,7 +45,7 @@ class _BtnTweetsState extends State<BtnTweets> {
             setState(() {
               click = !click;
             });
-            await Navigator.push(context, MaterialPageRoute(builder: (context) => ListarTweetsScreen(account: 'awscloud', bearer: 'AAAAAAAAAAAAAAAAAAAAACXZMAEAAAAACPvFQKG1vvXC2PT4oqni7EbfsmU%3DeKjOjGHvuN96DNtziy03KrF6pQdw7z4UiDJ7JW5U7LmhxUA5xu')));
+            await Navigator.push(context, MaterialPageRoute(builder: (context) => ListarTweetsScreen(account: 'awscloud', bearer: '')));
             //TODO: alterar o bearer key e caso queira mudar a conta buscada.
             setState(() {
               click = !click;

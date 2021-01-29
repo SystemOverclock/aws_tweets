@@ -145,8 +145,9 @@ class _ListarTweetsScreenState extends State<ListarTweetsScreen> {
                     height: size.height * 0.79,
                     width: size.width,
                     child: RefreshIndicator(
+                      color: theme.primaryColor,
                       onRefresh: () async {
-                        await _init(txt: controller.text, datetime: (selectDate != null ? DateFormat('yyyy-MM-dd\'T\'HH:mm:ss\'Z\'').format(DateTime(selectDate.year, selectDate.month, selectDate.day, selectTime.hour, selectTime.minute)) : DateTime.now()), refresh: true);
+                        await _init(txt: controller.text, datetime: (selectDate != null ? DateFormat('yyyy-MM-dd\'T\'HH:mm:ss\'Z\'').format(DateTime(selectDate.year, selectDate.month, selectDate.day, selectTime.hour, selectTime.minute)) : DateFormat('yyyy-MM-dd\'T\'HH:mm:ss\'Z\'').format(DateTime.now())), refresh: true);
                       },
                       child: ListView(
                         padding: EdgeInsets.all(10),
@@ -206,6 +207,7 @@ class _ListarTweetsScreenState extends State<ListarTweetsScreen> {
         Map info = element;
         String id = '';
         String post = '';
+        String attachments = '';
         int retweets = 0;
         int likes = 0;
         DateTime postdate = DateTime.now();
@@ -225,9 +227,11 @@ class _ListarTweetsScreenState extends State<ListarTweetsScreen> {
                 likes = value;
               }
             });
+          }else if(key == 'attachments'){
+            attachments = value;
           }
         });
-        posts.add(CartaoTweet(id: id, nome: nome, user: widget.account, likes: likes, post: post, postdate: postdate, retweets: retweets));
+        posts.add(CartaoTweet(id: id, nome: nome, user: widget.account, likes: likes, post: post, postdate: postdate, retweets: retweets, attachments: attachments));
       });
     });
     if(refresh){

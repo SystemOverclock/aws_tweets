@@ -14,3 +14,11 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+** Tutorial
+
+Para executar a aplicação insira as pastas em um projeto flutter, aplique as devidas configurações para a correta execução.
+
+Ademais, é necessário inserir uma chave Bearer, fornecida pelo Twitter, sendo apenas necessário a criação de uma conta de desenvolvedor.
+
+Obs: A conta utilizada, foi um exemplo e pode ser alterada logo ao lado do campo de Bearer token, esta área está demarcada com um TODO.
