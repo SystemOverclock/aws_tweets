@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:awscloud_tweets/import.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
@@ -35,6 +36,9 @@ class _ListarTweetsScreenState extends State<ListarTweetsScreen> {
   @override
   void initState() {
     _init();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     super.initState();
   }
 
